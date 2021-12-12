@@ -8,17 +8,39 @@ namespace HelloWorld
 {
     class Program
     {
+        static int a;
+        static float b;
+        static bool c;
+        static string d;
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.Write("A line");
-            Console.Write(", Not a new line");
+            var total = true; // needs to be initialized, can be assigned to any type and the type cannot change
 
-            Console.WriteLine("This is a line");
-            Console.WriteLine("This is also a line");
+            a = 1;
+            b = 1.1f; // unsigned integers, long, float, double, decimal // u,l,f,d,m, 
+            // The range changes
+            c = true;
+            d = "more than 1 characters";
 
-            Console.Write("\nThis is a line");
-            Console.Write("\nThis is the last line");
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(4.0m);
+            Console.WriteLine(c);
+            Console.WriteLine(d);
+            Console.WriteLine(@"C:\Users\HP\Desktop"); // Escape character is seen as a part of the string (called verbatim)
+            // \n, \t and all such escape characters are read as strings now
+
+            // String concatenation
+            string hello = "Hello ";
+            string helloWorld = hello + "World!";
+
+            string ex_one = $"{hello} World!"; // Uses variables in strings
+            string ex_two = $@"C:\Users\HP\Desktop\{helloWorld}.pdf"; // Uses verbatim
+
+            Console.WriteLine(ex_one);
+            Console.WriteLine(ex_two);
+
             Console.ReadLine();
         }
     }
