@@ -35,12 +35,41 @@ namespace HelloWorld
             string hello = "Hello ";
             string helloWorld = hello + "World!";
 
-            string ex_one = $"{hello} World!"; // Uses variables in strings
+            string ex_one = $"{hello}World!"; // Uses variables in strings
             string ex_two = $@"C:\Users\HP\Desktop\{helloWorld}.pdf"; // Uses verbatim
 
             Console.WriteLine(ex_one);
             Console.WriteLine(ex_two);
 
+            int first = 30;
+            int second = 40;
+
+            Console.WriteLine(first + second + " : adds these two numbers");
+            Console.WriteLine("concatenates these two numbers: " + second + 20); // if the addition is at the beggining,
+            // this command adds those two numbers
+            Console.WriteLine((first + 10) + " : adds these two numbers");
+
+            int sum = first + second;
+            int sub = first - second;
+            int mul = first * second;
+            int div = first / second;
+            float divFloat = 30f / 40;
+            float division = (float) 30 / 40; // casting
+
+            Console.WriteLine("Sum: " + sum + "\nSubstraction: " + sub + "\nMultiplication: " + mul + "\nDivision: " + div + "\nDivision with precision: " + divFloat);
+
+            int third = 25;
+            int fourth = 62;
+
+            third += 10;
+            third -= 5;
+            third *= 4;
+            third /= 3;
+
+            fourth++;
+            ++fourth;
+            fourth--;
+            --fourth;
             Console.ReadLine();
         }
     }
